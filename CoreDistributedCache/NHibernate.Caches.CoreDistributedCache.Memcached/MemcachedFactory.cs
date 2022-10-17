@@ -4,6 +4,7 @@ using Enyim.Caching;
 using Enyim.Caching.Configuration;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
 namespace NHibernate.Caches.CoreDistributedCache.Memcached
@@ -38,7 +39,10 @@ namespace NHibernate.Caches.CoreDistributedCache.Memcached
 
 			var loggerFactory = new LoggerFactory();
 
-			_cache = new MemcachedClient(loggerFactory, new MemcachedClientConfiguration(loggerFactory, options));
+			_cache = new MemcachedClient(loggerFactory,
+				new MemcachedClientConfiguration(loggerFactory,
+					new OptionsWrapper<MemcachedClientOptions>(options),
+					null));
 		}
 
 		private MemcachedFactory()
