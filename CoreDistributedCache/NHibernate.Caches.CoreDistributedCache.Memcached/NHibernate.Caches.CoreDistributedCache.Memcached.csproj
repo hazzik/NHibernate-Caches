@@ -34,5 +34,6 @@
   <ItemGroup>
     <PackageReference Include="EnyimMemcachedCore" Version="2.1.11" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="all" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.7.2" />
   </ItemGroup>
 </Project>
