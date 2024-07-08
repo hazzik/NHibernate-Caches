@@ -16,7 +16,7 @@
     <None Include="..\default.build" Link="default.build" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NHibernate" Version="5.2.0" />
+    <PackageReference Include="NHibernate" Version="5.4.9" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Bamboo.Prevalence">
